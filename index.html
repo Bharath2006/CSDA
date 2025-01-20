@@ -6,152 +6,197 @@
     <title>Store User Info</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #49d0fd, #ffffff);
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-image: url('https://www.transparenttextures.com/patterns/zig-zag.png');
-}
-.container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-h1 {
-    text-align: center;
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-form {
-    display: flex;
-    flex-direction: column;
-}
-input, select {
-    margin: 15px 0;
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
-    background-color: #f9f9f9;
-}
-input:focus, select:focus {
-    border-color: #ff7e5f;
-    outline: none;
-}
-button {
-    background-color: #ff7e5f;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-button:hover {
-    background-color: #feb47b;
-    transform: scale(1.05);
-}
-.material-icons {
-    font-size: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-#status {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-}
-.successMessage {
-            background-color: #28a745;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 18px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            animation: successAnimation 1s ease-out;
-}
-@keyframes successAnimation {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-}
-.loadingMessage {
-    background-color: #f39c12;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-    margin-top: 20px;
-    font-size: 18px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-.errorMessage {
-    background-color: #e74c3c;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-    margin-top: 20px;
-    font-size: 18px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-footer {
-    background-color: rgba(51, 51, 51, 0.5);
-    color: #f5f5f5;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 18px;
-}
-
-footer .footer-text {
-    font-size: 20px;
-    font-weight: 600;
-    color: #ffffff;
-}
-.text {
-    color: #a9a9a9;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-.circular-image {
-    width: 180px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    <style>body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #49d0fd, #ffffff);
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-image: url('https://www.transparenttextures.com/patterns/zig-zag.png');
+    }
+    
+    .container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input, select {
+        margin: 15px 0;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+        background-color: #f9f9f9;
+    }
+    
+    input:focus, select:focus {
+        border-color: #ff7e5f;
+        outline: none;
+    }
+    
+    button {
+        background-color: #ff7e5f;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #feb47b;
+        transform: scale(1.05);
+    }
+    
+    .material-icons {
+        font-size: 20px;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+    
+    #status {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+    }
+    
+    .successMessage {
+        background-color: #28a745;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 18px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        animation: successAnimation 1s ease-out;
+    }
+    
+    @keyframes successAnimation {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    .loadingMessage {
+        background-color: #f39c12;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 18px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .errorMessage {
+        background-color: #e74c3c;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 18px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        visibility: hidden;
+    }
+    
+    #overlay.active {
+        visibility: visible;
+    }
+    
+    .overlayMessage {
+        background-color: #ffffff;
+        color: #333;
+        padding: 20px 30px;
+        text-align: center;
+        border-radius: 12px;
+        font-size: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .circular-image {
+        width: 180px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #ccc;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    footer {
+        background-color: rgba(51, 51, 51, 0.5);
+        color: #f5f5f5;
+        text-align: center;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    footer .footer-text {
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .text {
+        color: #a9a9a9;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
 
 </style>
 </head>
@@ -182,13 +227,14 @@ footer .footer-text {
             <button type="submit"><span class="material-icons">check_circle</span> Submit</button>
         </form>
     </div>
-    <div id="status"></div>
-    <div class="loadingMessage" id="loadingMessage" style="display: none;">
-        Loading... Please wait.
-    </div>
-    <div class="successMessage" id="successMessage" style="display: none;">
-        All details saved successfully! 🎉
-    </div>
+    <div id="overlay">
+        <div class="loadingMessage" id="loadingMessage">
+            Loading... Please wait.
+        </div>
+        <div class="successMessage" id="successMessage">
+            All details saved successfully! 🎉
+        </div>
+    </div>    
     <div class="text">Powered by BS</div>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
@@ -220,46 +266,62 @@ footer .footer-text {
             document.getElementById('status').innerHTML = `<div class="errorMessage">${message}</div>`;
         }
 
-        document.getElementById('userForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            showLoadingMessage();
+        function showOverlay(messageType) {
+    const overlay = document.getElementById('overlay');
+    const loadingMessage = document.getElementById('loadingMessage');
+    const successMessage = document.getElementById('successMessage');
 
-            const userDetails = {
-                name: document.getElementById('name').value,
-                phoneNumber: document.getElementById('phoneNumber').value,
-                year: document.getElementById('year').value,
-                email: document.getElementById('email').value,
-                address: document.getElementById('address').value,
-                googleMapLink: document.getElementById('googleMapLink').value,
-                motherName: document.getElementById('motherName').value,
-                motherPhoneNumber: document.getElementById('motherPhoneNumber').value,
-                motherEmail: document.getElementById('motherEmail').value,
-                motherCompany: document.getElementById('motherCompany').value,
-                fatherName : document.getElementById('fatherName').value,
-                fatherEmail: document.getElementById('fatherEmail').value,
-                fatherPhoneNumber: document.getElementById('fatherPhoneNumber').value,
-                fatherCompany: document.getElementById('fatherCompany').value,
-            };
+    overlay.classList.add('active');
+    loadingMessage.style.display = messageType === 'loading' ? 'block' : 'none';
+    successMessage.style.display = messageType === 'success' ? 'block' : 'none';
+}
 
-            addDoc(collection(db, 'userData'), {
-                ...userDetails,
-                createdAt: serverTimestamp(),
-            })
-            .then(() => {
-                hideLoadingMessage();
-                document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('status').style.display = 'none';
-                setTimeout(() => {
-                    document.getElementById('successMessage').style.display = 'none';
-                    location.reload();
-                }, 3000);
-            })
-            .catch((error) => {
-                hideLoadingMessage();
-                console.error('Error adding document: ', error);
-                handleErrorMessage('Failed to save details. Please try again.');
-            });
+function hideOverlay() {
+    const overlay = document.getElementById('overlay');
+    overlay.classList.remove('active');
+}
+
+document.getElementById('userForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    showOverlay('loading');
+
+    const userDetails = {
+        name: document.getElementById('name').value,
+        phoneNumber: document.getElementById('phoneNumber').value,
+        year: document.getElementById('year').value,
+        email: document.getElementById('email').value,
+        address: document.getElementById('address').value,
+        googleMapLink: document.getElementById('googleMapLink').value,
+        motherName: document.getElementById('motherName').value,
+        motherPhoneNumber: document.getElementById('motherPhoneNumber').value,
+        motherEmail: document.getElementById('motherEmail').value,
+        motherCompany: document.getElementById('motherCompany').value,
+        fatherName: document.getElementById('fatherName').value,
+        fatherEmail: document.getElementById('fatherEmail').value,
+        fatherPhoneNumber: document.getElementById('fatherPhoneNumber').value,
+        fatherCompany: document.getElementById('fatherCompany').value,
+    };
+
+    addDoc(collection(db, 'userData'), {
+        ...userDetails,
+        createdAt: serverTimestamp(),
+    })
+        .then(() => {
+            showOverlay('success');
+            setTimeout(() => {
+                hideOverlay();
+                location.reload();
+            }, 3000);
+        })
+        .catch((error) => {
+            console.error('Error adding document: ', error);
+            hideOverlay();
+            alert('Failed to save details. Please try again.');
         });
+});
+
+    
+    
     </script>
 </body>
 </html>
