@@ -166,7 +166,6 @@ footer .footer-text {
                 <option value="1">1st Year</option>
                 <option value="2">2nd Year</option>
                 <option value="3">3rd Year</option>
-                <option value="4">4th Year</option>
             </select>
             <input type="email" id="email" placeholder="Email ID" required>
             <input type="text" id="address" placeholder="Address" required>
@@ -183,8 +182,10 @@ footer .footer-text {
         </form>
     </div>
     <div id="status"></div>
-    <div class="loadingMessage" id="loadingMessage" style="display: none;">
-        Loading... Please wait.
+    <div class="loadingOverlay" id="loadingOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; display: flex; justify-content: center; align-items: center;">
+        <div class="loadingMessage" style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+            Loading... Please wait.
+        </div>
     </div>
     <div class="successMessage" id="successMessage" style="display: none;">
         All details saved successfully! 🎉
@@ -207,21 +208,11 @@ footer .footer-text {
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        function showLoadingMessage() {
-            document.getElementById('loadingMessage').style.display = 'block';
-            document.getElementById('status').style.display = 'none';
-        }
-
-        function hideLoadingMessage() {
-            document.getElementById('loadingMessage').style.display = 'none';
-        }
-
-        function handleErrorMessage(message) {
-            document.getElementById('status').innerHTML = <div class="errorMessage">${message}</div>;
-        }
-
-        document.getElementById('userForm').addEventListener('submit', (e) => {
+        document.getElementById('userForm').addEventListener('submit', async (e) => {
             e.preventDefault();
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.display = 'flex';
+
             const userDetails = {
                 name: document.getElementById('name').value,
                 phoneNumber: document.getElementById('phoneNumber').value,
@@ -233,28 +224,27 @@ footer .footer-text {
                 motherPhoneNumber: document.getElementById('motherPhoneNumber').value,
                 motherEmail: document.getElementById('motherEmail').value,
                 motherCompany: document.getElementById('motherCompany').value,
-                fatherName : document.getElementById('fatherName').value,
+                fatherName: document.getElementById('fatherName').value,
                 fatherEmail: document.getElementById('fatherEmail').value,
                 fatherPhoneNumber: document.getElementById('fatherPhoneNumber').value,
                 fatherCompany: document.getElementById('fatherCompany').value,
+                createdAt: serverTimestamp()
             };
 
-            addDoc(collection(db, 'familyDetails'), {
-                ...userDetails,
-                createdAt: serverTimestamp(),
-            })
-            .then(() => {
+            try {
+                await addDoc(collection(db, 'UD'), userDetails);
+                loadingOverlay.style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('status').style.display = 'none';
                 setTimeout(() => {
                     document.getElementById('successMessage').style.display = 'none';
                     location.reload();
                 }, 3000);
-            })
-            .catch((error) => {
-                console.error('Error adding document: ', error);
-            });
+            } catch (error) {
+                loadingOverlay.style.display = 'none';
+                document.getElementById('status').innerHTML = `<div class="errorMessage">Error: ${error.message}</div>`;
+            }
         });
     </script>
 </body>
+
 </html>
