@@ -158,10 +158,9 @@ footer .footer-text {
 <body>
     <div class="container userInfo" id="userInfo">
         <h1><span class="material-icons">person</span> Enter Personal Information</h1>
-        <!-- <img src="C:\Users\admin\Desktop\CSDA\kpr.jpeg" alt="Profile Picture" class="circular-image"> -->
         <form id="userForm">
-            <input type="text" id="name" placeholder="Full Name" required>
-            <input type="text" id="department" placeholder="Department" required>
+            <input type="text" id="name" placeholder="Student Name" required>
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
             <select id="year" required>
                 <option value="" disabled selected>Select Year</option>
                 <option value="1">1st Year</option>
@@ -169,106 +168,17 @@ footer .footer-text {
                 <option value="3">3rd Year</option>
                 <option value="4">4th Year</option>
             </select>
-                <label for="scholarship">Scholarship?</label>
-            <select id="scholarship" required>
-                <option value="" disabled selected>Select Yes or No</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
             <input type="email" id="email" placeholder="Email ID" required>
-            <input type="text" id="leetCodeId" placeholder="LeetCode ID" required>
-            <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
-            <input type="url" id="linkedin" placeholder="LinkedIn Profile Link" required>
             <input type="text" id="address" placeholder="Address" required>
             <input type="url" id="googleMapLink" placeholder="Google Map Link (Current Address)" required>
-            <button type="submit"><span class="material-icons">arrow_forward</span> Next</button>
-        </form>
-    </div>
-    <div class="container motherInfo" id="motherInfo" style="display: none;">
-        <h1><span class="material-icons">person</span> Enter Mother's Information</h1>
-        <form id="motherForm">
             <input type="text" id="motherName" placeholder="Mother's Name" required>
-            <input type="text" id="motherOccupation" placeholder="Occupation" required>
-            <input type="text" id="motherCompany" placeholder="Mother's Work Company Name" required>
-            <input type="number" id="motherSalaryMonthly" placeholder="Monthly Salary" required>
-            <input type="number" id="motherSalaryYearly" placeholder="Yearly Salary" required>
-            <input type="email" id="motherEmail" placeholder="Mother's Email" required>
             <input type="tel" id="motherPhoneNumber" placeholder="Mother's Phone Number" required>
-            <label for="motherWorking">Is Mother Working?</label>
-            <select id="motherWorking" required>
-                <option value="" disabled selected>Select Yes or No</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-            
-            <input type="text" id="motherWorkPlace" placeholder="Work Place Address" required>
-            <input type="url" id="motherGoogleMapLink" placeholder="Google Map Link (Work Place)" required>
-            <button type="submit"><span class="material-icons">arrow_forward</span> Next</button>
-        </form>
-    </div>
-
-    <div class="container fatherInfo" id="fatherInfo" style="display: none;">
-        <h1><span class="material-icons">person</span> Enter Father's Information</h1>
-        <form id="fatherForm">
+            <input type="email" id="motherEmail" placeholder="Mother's Email" required>
+            <input type="text" id="motherCompany" placeholder="Mother's Company Name" required>
             <input type="text" id="fatherName" placeholder="Father's Name" required>
-            <input type="text" id="fatherOccupation" placeholder="Occupation" required>
-            <input type="text" id="fatherCompany" placeholder="Father's Work Company Name" required>
-            <input type="number" id="fatherSalaryMonthly" placeholder="Monthly Salary" required>
-            <input type="number" id="fatherSalaryYearly" placeholder="Yearly Salary" required>
-            <input type="text" id="fatherWorkPlace" placeholder="Work Place Address" required>
-            <input type="url" id="fatherGoogleMapLink" placeholder="Google Map Link (Work Place)" required>
-            <label for="fatherWorking">Is Father Working?</label>
-            <select id="fatherWorking" required>
-                <option value="" disabled selected>Select Yes or No</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
             <input type="email" id="fatherEmail" placeholder="Father's Email" required>
             <input type="tel" id="fatherPhoneNumber" placeholder="Father's Phone Number" required>
-            <button type="submit"><span class="material-icons">arrow_forward</span> Next</button>
-        </form>
-    </div>
-
-    <div class="container brotherInfo" id="brotherInfo" style="display: none;">
-        <h1><span class="material-icons">person</span> Enter Brother's Information</h1>
-        <form id="brotherForm">
-            <input type="text" id="brotherName" placeholder="Brother's Name" required>
-            <input type="text" id="brotherOccupation" placeholder="Occupation" required>
-            <input type="text" id="brotherCompany" placeholder="Brother's Work Company Name" required>
-            <input type="number" id="brotherSalaryMonthly" placeholder="Monthly Salary" required>
-            <input type="number" id="brotherSalaryYearly" placeholder="Yearly Salary" required>
-            <input type="text" id="brotherWorkPlace" placeholder="Work Place Address" required>
-            <input type="url" id="brotherGoogleMapLink" placeholder="Google Map Link (Work Place)" required>
-            <label for="brotherWorking">Is Brother Working?</label>
-            <select id="brotherWorking" required>
-                <option value="" disabled selected>Select Yes or No</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-            <input type="email" id="brotherEmail" placeholder="Brother's Email" required>
-            <input type="tel" id="brotherPhoneNumber" placeholder="Brother's Phone Number" required>
-            <button type="submit"><span class="material-icons">arrow_forward</span> Next</button>
-        </form>
-    </div>
-
-    <div class="container sisterInfo" id="sisterInfo" style="display: none;">
-        <h1><span class="material-icons">person</span> Enter Sister's Information</h1>
-        <form id="sisterForm">
-            <input type="text" id="sisterName" placeholder="Sister's Name" required>
-            <input type="text" id="sisterOccupation" placeholder="Occupation" required>
-            <input type="text" id="sisterCompany" placeholder="Sister's Work Company Name" required>
-            <input type="number" id="sisterSalaryMonthly" placeholder="Monthly Salary" required>
-            <input type="number" id="sisterSalaryYearly" placeholder="Yearly Salary" required>
-            <input type="text" id="sisterWorkPlace" placeholder="Work Place Address" required>
-            <input type="url" id="sisterGoogleMapLink" placeholder="Google Map Link (Work Place)" required>
-            <label for="sisterWorking">Is Sister Working?</label>
-            <select id="sisterWorking" required>
-                <option value="" disabled selected>Select Yes or No</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-            <input type="email" id="sisterEmail" placeholder="Sister's Email" required>
-            <input type="tel" id="sisterPhoneNumber" placeholder="Sister's Phone Number" required>
+            <input type="text" id="fatherCompany" placeholder="Father's Company Name" required>
             <button type="submit"><span class="material-icons">check_circle</span> Submit</button>
         </form>
     </div>
@@ -285,19 +195,18 @@ footer .footer-text {
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";
 
         const firebaseConfig = {
-            apiKey: "AIzaSyD084qjQ2Gld3PR-YT2V1zmDmBtDhQNAQ4",
-            authDomain: "fir-5c93a.firebaseapp.com",
-            projectId: "fir-5c93a",
-            storageBucket: "fir-5c93a.firebasestorage.app",
-            messagingSenderId: "957575699822",
-            appId: "1:957575699822:web:4c39e3243b2df8dd45b57f",
-            measurementId: "G-H5E7NMR8EV"
+            apiKey: "AIzaSyDuuumZaf2vqFA3ezY_eq98Pq7qQIDTe0Q",
+            authDomain: "kkrt-8726d.firebaseapp.com",
+            projectId: "kkrt-8726d",
+            storageBucket: "kkrt-8726d.firebasestorage.app",
+            messagingSenderId: "775944666621",
+            appId: "1:775944666621:web:180754cc4a130108372d94",
+            measurementId: "G-BT8TZ60JGR"
         };
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        
         function showLoadingMessage() {
             document.getElementById('loadingMessage').style.display = 'block';
             document.getElementById('status').style.display = 'none';
@@ -308,152 +217,44 @@ footer .footer-text {
         }
 
         function handleErrorMessage(message) {
-            document.getElementById('status').innerHTML = `<div class="errorMessage">${message}</div>`;
+            document.getElementById('status').innerHTML = <div class="errorMessage">${message}</div>;
         }
-        let userDetails = {};
-        function isValidURL(str) {
-            const pattern = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}([\/?].*)?$/;
-            return pattern.test(str);
-        }
+
         document.getElementById('userForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    userDetails.name = document.getElementById('name').value;
-    userDetails.department = document.getElementById('department').value;
-    userDetails.year = document.getElementById('year').value;
-    userDetails.address = document.getElementById('address').value;
-    userDetails.email = document.getElementById('email').value;
-    userDetails.leetCodeId = document.getElementById('leetCodeId').value;
-    userDetails.phoneNumber = document.getElementById('phoneNumber').value;
-    userDetails.scholarship = document.getElementById('scholarship').value;
-    userDetails.linkedin = document.getElementById('linkedin').value;
-    const googleMapLink = document.getElementById('googleMapLink').value;
-    if (!isValidURL(googleMapLink)) {
-        alert("Please enter a valid Google Map link.");
-        return;
-    }
-    userDetails.googleMapLink = googleMapLink;
-    document.getElementById('status').innerText = 'User Info saved, proceed to Mother Details!';
-    document.getElementById('motherInfo').style.display = 'block';
-    document.getElementById('userInfo').style.display = 'none';
-});
+            e.preventDefault();
+            const userDetails = {
+                name: document.getElementById('name').value,
+                phoneNumber: document.getElementById('phoneNumber').value,
+                year: document.getElementById('year').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                googleMapLink: document.getElementById('googleMapLink').value,
+                motherName: document.getElementById('motherName').value,
+                motherPhoneNumber: document.getElementById('motherPhoneNumber').value,
+                motherEmail: document.getElementById('motherEmail').value,
+                motherCompany: document.getElementById('motherCompany').value,
+                fatherName : document.getElementById('fatherName').value,
+                fatherEmail: document.getElementById('fatherEmail').value,
+                fatherPhoneNumber: document.getElementById('fatherPhoneNumber').value,
+                fatherCompany: document.getElementById('fatherCompany').value,
+            };
 
-document.getElementById('motherForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    userDetails.motherName = document.getElementById('motherName').value;
-    userDetails.motherOccupation = document.getElementById('motherOccupation').value;
-    userDetails.motherCompany = document.getElementById('motherCompany').value;
-    userDetails.motherSalaryMonthly = document.getElementById('motherSalaryMonthly').value;
-    userDetails.motherSalaryYearly = document.getElementById('motherSalaryYearly').value;
-    userDetails.motherWorkPlace = document.getElementById('motherWorkPlace').value;
-    userDetails.motherEmail = document.getElementById('motherEmail').value;
-    userDetails.motherPhoneNumber = document.getElementById('motherPhoneNumber').value;
-    const motherGoogleMapLink = document.getElementById('motherGoogleMapLink').value;
-    if (!isValidURL(motherGoogleMapLink)) {
-        alert("Please enter a valid Google Map link.");
-        return;
-    }
-    userDetails.motherGoogleMapLink = motherGoogleMapLink;
-    userDetails.motherWorking = document.getElementById('motherWorking').value;
-
-    document.getElementById('status').innerText = 'Mother Info saved, proceed to Father Details!';
-    document.getElementById('fatherInfo').style.display = 'block';
-    document.getElementById('motherInfo').style.display = 'none';
-});
-document.getElementById('fatherForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    userDetails.fatherName = document.getElementById('fatherName').value;
-    userDetails.fatherOccupation = document.getElementById('fatherOccupation').value;
-    userDetails.fatherCompany = document.getElementById('fatherCompany').value;
-    userDetails.fatherSalaryMonthly = document.getElementById('fatherSalaryMonthly').value;
-    userDetails.fatherSalaryYearly = document.getElementById('fatherSalaryYearly').value;
-    userDetails.fatherWorkPlace = document.getElementById('fatherWorkPlace').value;
-    userDetails.fatherEmail = document.getElementById('fatherEmail').value;
-    userDetails.fatherPhoneNumber = document.getElementById('fatherPhoneNumber').value;
-    const fatherGoogleMapLink = document.getElementById('fatherGoogleMapLink').value;
-    if (!isValidURL(fatherGoogleMapLink)) {
-        alert("Please enter a valid Google Map link.");
-        return;
-    }
-    userDetails.fatherGoogleMapLink = fatherGoogleMapLink;
-    userDetails.fatherWorking = document.getElementById('fatherWorking').value;
-
-    document.getElementById('status').innerText = 'Father Info saved, proceed to Brother Details!';
-    document.getElementById('brotherInfo').style.display = 'block';
-    document.getElementById('fatherInfo').style.display = 'none';
-});
-document.getElementById('brotherForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    userDetails.brotherName = document.getElementById('brotherName').value;
-    userDetails.brotherOccupation = document.getElementById('brotherOccupation').value;
-    userDetails.brotherCompany = document.getElementById('brotherCompany').value;
-    userDetails.brotherSalaryMonthly = document.getElementById('brotherSalaryMonthly').value;
-    userDetails.brotherSalaryYearly = document.getElementById('brotherSalaryYearly').value;
-    userDetails.brotherWorkPlace = document.getElementById('brotherWorkPlace').value;
-    userDetails.brotherEmail = document.getElementById('brotherEmail').value;
-    userDetails.brotherPhoneNumber = document.getElementById('brotherPhoneNumber').value;
-    const brotherGoogleMapLink = document.getElementById('brotherGoogleMapLink').value;
-    if (!isValidURL(brotherGoogleMapLink)) {
-        alert("Please enter a valid Google Map link.");
-        return;
-    }
-    userDetails.brotherGoogleMapLink = brotherGoogleMapLink;
-    userDetails.brotherWorking = document.getElementById('brotherWorking').value;
-
-    document.getElementById('status').innerText = 'Brother Info saved, proceed to Sister Details!';
-    document.getElementById('sisterInfo').style.display = 'block';
-    document.getElementById('brotherInfo').style.display = 'none';
-});
-document.getElementById('sisterForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    userDetails.sisterName = document.getElementById('sisterName').value;
-    userDetails.sisterOccupation = document.getElementById('sisterOccupation').value;
-    userDetails.sisterCompany = document.getElementById('sisterCompany').value;
-    userDetails.sisterSalaryMonthly = document.getElementById('sisterSalaryMonthly').value;
-    userDetails.sisterSalaryYearly = document.getElementById('sisterSalaryYearly').value;
-    userDetails.sisterWorkPlace = document.getElementById('sisterWorkPlace').value;
-    userDetails.sisterEmail = document.getElementById('sisterEmail').value;
-    userDetails.sisterPhoneNumber = document.getElementById('sisterPhoneNumber').value;
-    const sisterGoogleMapLink = document.getElementById('sisterGoogleMapLink').value;
-    if (!isValidURL(sisterGoogleMapLink)) {
-        alert("Please enter a valid Google Map link.");
-        return;
-    }
-    userDetails.sisterGoogleMapLink = sisterGoogleMapLink;
-    userDetails.sisterWorking = document.getElementById('sisterWorking').value;
-
-    addDoc(collection(db, 'familyDetails'), {
-        ...userDetails,
-        createdAt: serverTimestamp(),
-    })
-    .then(() => {
-        document.getElementById('successMessage').style.display = 'block';
-        document.getElementById('status').style.display = 'none';
-        setTimeout(() => {
-            document.getElementById('successMessage').style.display = 'none';
-            location.reload();
-        }, 3000);
-    })
-    .catch((error) => {
-        console.error('Error adding document: ', error);
-    });
-});
-    function saveToFirestore(userDetails) {
-        showLoadingMessage();
-        const userRef = collection(db, 'userDetails');
-        addDoc(userRef, {
-            ...userDetails,
-            createdAt: serverTimestamp()
-        })
-        .then(() => {
-            hideLoadingMessage();
-            document.getElementById('successMessage').style.display = 'block';
-        })
-        .catch((error) => {
-            hideLoadingMessage();
-            handleErrorMessage(`Error: ${error.message}`);
+            addDoc(collection(db, 'familyDetails'), {
+                ...userDetails,
+                createdAt: serverTimestamp(),
+            })
+            .then(() => {
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('status').style.display = 'none';
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                    location.reload();
+                }, 3000);
+            })
+            .catch((error) => {
+                console.error('Error adding document: ', error);
+            });
         });
-    }
-
-</script>
+    </script>
 </body>
 </html>
