@@ -166,6 +166,7 @@ footer .footer-text {
                 <option value="1">1st Year</option>
                 <option value="2">2nd Year</option>
                 <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
             </select>
             <input type="email" id="email" placeholder="Email ID" required>
             <input type="text" id="address" placeholder="Address" required>
@@ -232,7 +233,7 @@ footer .footer-text {
             };
 
             try {
-                await addDoc(collection(db, 'UD'), userDetails);
+                await addDoc(collection(db, 'userDetails'), userDetails);
                 loadingOverlay.style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
                 setTimeout(() => {
